@@ -1,0 +1,21 @@
+Package: wfhr
+Type: Package
+Title: Facilitates the Acquisition of Women's Field Hockey Data from the NCAA.
+Version: 0.1.0
+Author: Bill Petti <billpetti@gmail.com>
+Maintainer: Bill Petti <billpetti@gmail.com>
+Description: Includes functions for acquiring schedule and game results as well as rosters.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 3.2.0)
+Imports:
+    dplyr,
+    readr,
+    tibble,
+    rvest,
+    xml2,
+    magrittr,
+    stringr
+RoxygenNote: 7.1.1
