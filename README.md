@@ -65,7 +65,7 @@ school school_id  year division conference_id conference
 ```
 This returns all records in the `fh_master_lu_table` data set
 where ‘UConn’ is in the school name and the teams are listed in
-division 1. You can see that UCOnn has switched conferences over the
+division 1. You can see that UConn has switched conferences over the
 years from the ACC to the Big East. We also see that UConn’s
 `school_id` is 392. We’ll need that `school_id` for the rest of the
 functions.
