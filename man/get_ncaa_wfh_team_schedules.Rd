@@ -4,7 +4,7 @@
 \alias{get_ncaa_wfh_team_schedules}
 \title{Acquire NCAA Women's Field Hockey Schedules and Results}
 \usage{
-get_ncaa_wfh_team_schedules(team_id, year)
+get_ncaa_wfh_team_schedules(team_id, year, get_boxscore_urls = FALSE)
 }
 \arguments{
 \item{team_id}{The unique team id from the NCAA}

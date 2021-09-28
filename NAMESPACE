@@ -2,8 +2,10 @@
 
 export(get_ncaa_wfh_team_roster)
 export(get_ncaa_wfh_team_schedules)
+export(school_lu)
 import(dplyr)
 import(janitor)
+import(magrittr)
 import(rvest)
 import(stringr)
 import(xml2)
