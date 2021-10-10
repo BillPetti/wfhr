@@ -163,9 +163,20 @@ get_ncaa_wfh_team_schedules <- function(team_id,
     dplyr::mutate(opponent = unlist(regmatches(payload_df$opponent,
                                                gregexpr(paste0(fh_distinct_teams, collapse = "|"),
                                                         payload_df$opponent))))
+
   payload_df <- payload_df %>%
-    dplyr::mutate(team = team,
-                  conference = conference,
+    dplyr::mutate(team = team)
+
+  payload_df <- payload_df %>%
+    dplyr::mutate(team = stringr::str_trim(payload_df$team)) %>%
+    dplyr::mutate(team = gsub('\\(|\\)', '', team))
+
+  payload_df <- payload_df %>%
+    dplyr::mutate(team = unlist(regmatches(payload_df$team,
+                                           gregexpr(paste0(fh_distinct_teams, collapse = "|"),
+                                                    payload_df$team))))
+  payload_df <- payload_df %>%
+    dplyr::mutate(conference = conference,
                   conference_id = conference_id,
                   division = division) %>%
     dplyr::select(team, conference, conference_id, division, everything())
