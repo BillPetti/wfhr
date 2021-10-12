@@ -17,5 +17,6 @@ Imports:
     rvest,
     xml2,
     magrittr,
-    stringr
+    stringr, 
+    janitor
 RoxygenNote: 7.1.1
