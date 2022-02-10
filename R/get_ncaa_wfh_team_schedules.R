@@ -167,7 +167,7 @@ get_ncaa_wfh_team_schedules <- function(team_id,
   payload_df <- payload_df %>%
     dplyr::mutate(team = team)
 
-  payload_df <- payload_df %>%
+payload_df <- payload_df %>%
     dplyr::mutate(team = stringr::str_trim(payload_df$team)) %>%
     dplyr::mutate(team = gsub('\\(|\\)', '', team))
 
